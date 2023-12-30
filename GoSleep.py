@@ -4,35 +4,32 @@ import time
 
 def fechar(programa):
     try:
-        # Procura a janela na bandeja do sistema (Metodo para programas que atuam em segundo plano e/ou estao minimizados)
-        janela = None
-        for window in gw.getAllTitles():
-            if programa.lower() in window.lower():
-                janela = gw.getWindowsWithTitle(window)[0]
-                break
-        
-        # Caso não encontre programas que atua em segundo plano e/ou esta minimizado
-        if not janela:
-            raise IndexError(f"Não foi possível encontrar o programa {programa} na bandeja do sistema.")
+        # Procura todas as janelas do programa na bandeja do sistema
+        janelas = [window for window in gw.getWindowsWithTitle(programa) if programa.lower() in window.title.lower()]
 
-        # Restaura a janela antes de fechar
-        janela.restore()
-        time.sleep(1)  # Aguarda um momento para a janela ser restaurada
+        # Caso não encontre programas que atuam em segundo plano e/ou estão minimizados
+        if not janelas:
+            raise IndexError(f"Não foi possível encontrar janelas do programa {programa} na bandeja do sistema.")
 
-        # Foca na janela do programa
-        janela.activate()
+        # Fecha cada janela do programa
+        for janela in janelas:
+            # Restaura a janela antes de fechar
+            janela.restore()
+            time.sleep(1)  # Aguarda um momento para a janela ser restaurada
 
-        # Pressiona Alt + F4 para fechar a janela
-        pyautogui.hotkey('alt', 'f4')
+            # Foca na janela do programa
+            janela.activate()
 
-        print(f"Programa {programa} foi fechado.")
+            # Pressiona Alt + F4 para fechar a janela
+            pyautogui.hotkey('alt', 'f4')
+
+        print(f"Todas as janelas do programa {programa} foram fechadas.")
     except Exception as e:
-        print(f"Erro ao fechar o programa {programa}: {e}")
+        print(f"Erro ao fechar as janelas do programa {programa}: {e}")
 
 # Coloque o "programa" que deseja fechar aqui em baixo
-# (por padrao está os meus programas mas voce pode personalizar a sua escolha)
+# (por padrão, estão listados meus programas, mas você pode personalizar a sua escolha)
 fechar("Discord")
-fechar("Steam")
 fechar("Firefox")
 
 # Adiciona uma pausa para que o console não se feche imediatamente
