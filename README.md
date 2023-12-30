@@ -20,7 +20,7 @@ O projeto "Go Sleep" foi desenvolvido para proporcionar aos usuários uma maneir
 
 ## NOTA
 
-### O projeto ja vem com um executavel, por padrao está os meus programas ( "Discord")("Steam")("Firefox") mas voce pode personalizar a sua escolha
+### O projeto ja vem com um executavel, por padrao está os meus programas mas voce pode personalizar a sua escolha
 
 ## Requisitos
 
