@@ -57,7 +57,7 @@ fechar("Firefox")
 fechar("TradeSkillMaster Application v4.13.0 - blackkaiser")
 
 # Coloque o "programa" que não fecham com Alt+F4 e voce deseja fechar aqui em baixo
-fechar_processo("Microsoft Teams")
+fechar_processo("Microsoft Teams classic")
 fechar_processo("Steam")
 
 
