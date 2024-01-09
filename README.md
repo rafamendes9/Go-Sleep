@@ -10,20 +10,47 @@ O projeto "Go Sleep" foi desenvolvido para proporcionar aos usuários uma maneir
 
 - **Procura na Bandeja do Sistema:** Utiliza a biblioteca `pygetwindow` para procurar programas na bandeja do sistema, garantindo que até mesmo programas minimizados ou em segundo plano sejam identificados e fechados.
 
+## Interface Gráfica
+
+A interface gráfica é criada usando a biblioteca Tkinter.
+
+- **Lista de Programas:**
+  - O usuário pode selecionar programas da lista apresentada.
+  - Adicione ou remova programas da lista conforme necessário.
+
+- **Botão "Fechar Programas Selecionados":**
+  - Quando pressionado, chama a função `fechar_programas_selecionados()` para fechar os programas selecionados.
+
+- **Botão "Fechar":**
+  - Fecha a interface gráfica quando pressionado.
+
+
 ## Como Usar
 
-1. **Adaptação ao Seu Uso:** Abra o arquivo `GoSleep.py` e, na seção final, adicione os nomes dos programas que deseja fechar. Por padrão, estão listados "Discord", "Steam" e "Firefox". Personalize conforme sua necessidade.
+1. **Adicionar Programas:**
+   - Adicione os programas desejados à lista `programas` no código.
 
-2. **Execução do Script:** Execute o script `GoSleep.py`. Ele fechará automaticamente os programas especificados.
+2. **Executar o Código:**
+   - Execute o script Python.
+   - A interface gráfica será exibida com a lista de programas.
 
-3. **Pausa no Encerramento:** Após o fechamento dos programas, o console aguardará uma entrada do usuário antes de ser fechado. Isso permite verificar se todos os programas foram encerrados corretamente.
+3. **Selecionar Programas:**
+   - Selecione os programas que deseja fechar na lista.
+
+4. **Fechar Programas:**
+   - Pressione o botão "Fechar Programas Selecionados" para fechar os programas selecionados.
+
+5. **Fechar Interface:**
+   - Pressione o botão "Fechar" para fechar a interface gráfica.
+
 
 ## NOTA
 
-### O projeto ja vem com um executavel, por padrao está os meus programas mas voce pode personalizar a sua escolha
+### O projeto já vem sendo atualizado/modificado constantemente para melhor atender ao usuário. Espero que este projeto possa ajudar você tanto quanto me ajuda
 
 ## Requisitos
 
+- Windons(7,10)
 - Python 3.x
 - Bibliotecas: `pygetwindow`, `pyautogui`
 
