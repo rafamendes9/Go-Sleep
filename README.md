@@ -54,7 +54,4 @@ A interface gráfica é criada usando a biblioteca Tkinter.
 - Python 3.x
 - Bibliotecas: `pygetwindow`, `pyautogui`
 
-Instale as bibliotecas usando:
 
-```bash
-pip install pygetwindow pyautogui
